@@ -3,7 +3,7 @@
 <xsl:output method="text"/>
 
 <xsl:template match="/">
-	<xsl:for-each select='//table[@id="pdg"]/tbody/tr'>
+	<xsl:for-each select='//table[@id="pdg"]/tbody/tr[position() > 2]'>
 		<xsl:value-of select="@id"/>
 		<xsl:text>&#10;</xsl:text>
 		<xsl:value-of select="td[2]"/>
