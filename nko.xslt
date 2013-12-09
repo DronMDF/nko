@@ -18,7 +18,7 @@
 		<xsl:text>&#10;</xsl:text>
 		<xsl:value-of select="td[12]"/>
 		<xsl:text>&#10;</xsl:text>
-		<xsl:text>&#10;</xsl:text>
+		<xsl:text>--- separator ---&#10;</xsl:text>
 	</xsl:for-each>
 </xsl:template>
 </xsl:stylesheet>
