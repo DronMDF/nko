@@ -3,6 +3,7 @@
 import os
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException
 
 browser = webdriver.Firefox()
 
@@ -19,7 +20,7 @@ for n in range(999):
 	open('nko/page%03u.html' % n, 'wb').write(browser.page_source.encode('windows-1251'))
 	try:
 		browser.find_element_by_xpath("//*[@id='pdg_next' and @dsbl='n']").click()
-	except selenium.common.exceptions.NoSuchElementException:
+	except NoSuchElementException:
 		break
 
 browser.close()
