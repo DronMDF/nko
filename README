@@ -1,0 +1,20 @@
+
+
+Отчеты НКО
+http://unro.minjust.ru/NKOReports.aspx?request_type=nko
+
+$ ./fetch-nko.py
+$ ./nko.sh nko
+$ ./nko.py nko
+
+В файле содержатся дубликаты
+$ mv nko.csv nko2.csv
+$ uniq nko2.csv > nko.csv
+
+Отчеты ИНКО
+http://unro.minjust.ru/NKOReports.aspx?request_type=inko
+
+$ ./fetch-inko.py
+$ ./nko.sh inko
+$ ./nko.py inko
+
