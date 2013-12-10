@@ -25,7 +25,8 @@ def chunks(l):
 			chunks.append(chunk)
 			chunk = []
 		else:
-			chunk.append(i.rstrip('\n'))
+			ii = i.replace('\xa0', ' ')
+			chunk.append(ii.rstrip('\n '))
 	return chunks
 
 for p in sorted(pages):
